@@ -30,7 +30,6 @@
     content: '';
     height: 380px;
     width: 19em;
-    top: inherit;
     background-image: url('../img/fingerPrint_02.png');
     position: absolute;
     background-size: 100%;
@@ -65,12 +64,12 @@
 @keyframes var {
 
     0%, 100% {
-        top: calc((100% - 380px) / 2 ) ;
+        top: calc((100vh - 380px) / 2);
         
     }
 
     50% {
-        top: calc(((100% - 380px) / 2) + (380px * .9));
+        top: calc(((100vh - 380px) / 2) + (380px * .9));
     }
 }
 
@@ -108,6 +107,7 @@
 
         height: 330px;
         width: 17em;
+        top: inherit;
         
     }
 
@@ -129,12 +129,12 @@
      @keyframes var {
 
         0%, 100% {
-            top: calc((100% - 330px) / 2) ;
+            top: calc((100vh - 330px) / 2) ;
             
         }
     
         50% {
-            top: calc(((100% - 330px) / 2 ) + (330px * .9 ));
+            top: calc(((100vh - 330px) / 2 ) + (330px * .9 ));
         }
     } 
 }
