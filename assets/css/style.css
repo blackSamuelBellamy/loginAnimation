@@ -29,6 +29,7 @@
     content: '';
     height: 380px;
     width: 19em;
+    top: inherit;
     background-image: url('../img/fingerPrint_02.png');
     position: absolute;
     background-size: 100%;
@@ -53,7 +54,7 @@
     height: 8px;
     background-color: aqua;
     position: absolute;
-    top: 0;
+    top: calc((((100% - 380px) / 2) ));
     left: 50%;
     transform: translateX(-50%);
     animation: var 4s ease-in-out infinite;
@@ -69,7 +70,7 @@
     }
 
     50% {
-        top: calc(((100% - 380px) / 2 ) + (340px ));
+        top: calc(((100% - 380px) / 2 ) + (400px ));
     }
 }
 
