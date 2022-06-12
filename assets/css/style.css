@@ -54,7 +54,7 @@
     height: 8px;
     background-color: aqua;
     position: absolute;
-    top: calc((((100% - 380px) / 2) ));
+    top: calc((((100% - 380px) / 2) + 20px ));
     left: 50%;
     transform: translateX(-50%);
     animation: var 4s ease-in-out infinite;
@@ -70,7 +70,7 @@
     }
 
     50% {
-        top: calc(((100% - 380px) / 2 ) + (380px ));
+        top: calc(((100% - 380px) / 2 ) + (350px ));
     }
 }
 
@@ -114,4 +114,16 @@
     .container p {
         font-size: 1.5em;
      }
+
+     @keyframes var {
+
+        0%, 100% {
+            top: calc((((100% - 380px) / 2) + 20px));
+            
+        }
+    
+        50% {
+            top: calc(((100% - 380px) / 2 ) + (370px ));
+        }
+    }
 }
