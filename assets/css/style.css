@@ -15,6 +15,7 @@
 }
 
 .fingerPrint {
+
     height: 380px;
     width: 19em;
 
@@ -54,7 +55,6 @@
     height: 8px;
     background-color: aqua;
     position: absolute;
-    top: calc((((100% - 380px) / 2) + 20px ));
     left: 50%;
     transform: translateX(-50%);
     animation: var 4s ease-in-out infinite;
@@ -65,12 +65,12 @@
 @keyframes var {
 
     0%, 100% {
-        top: calc((((100% - 380px) / 2) ));
+        top: calc((100% - 380px) / 2 - (380px * .1) ) ;
         
     }
 
     50% {
-        top: calc(((100% - 380px) / 2 ) + (350px ));
+        top: calc(((100% - 380px) / 2) + (380px - (380px * .1)));
     }
 }
 
