@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fingerPrint {
+    height: 380px;
+    width: 19em;
+
+}
+
+.img {
+    width: 100%;
+    height: 100%; 
+}
+
+.fingerPrint::before {
+    content: '';
+    height: 380px;
+    width: 19em;
+    background-image: url('../img/fingerPrint_02.png');
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: finger 4s ease-in-out infinite;
+}
+
+@keyframes finger {
+
+    0%, 100% {
+        height: 0;
+    }
+
+    50% {
+        height: 55%;
+    }
+}
+
+.fingerPrint::after {
+    content: '';
+    width: 19em;
+    height: 8px;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: var 4s ease-in-out infinite;
+    border-radius: 80px;
+    filter: drop-shadow(0 0 30px aqua) drop-shadow(0 0 50px aqua);
+}
+
+@keyframes var {
+
+    0%, 100% {
+        top: 20%;
+    }
+
+    50% {
+        top: 75%;
+    }
+}
+
+
+.container p {
+    font-family: consolas;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: aqua;
+    filter: drop-shadow(0 0 30px aqua) drop-shadow(0 0 50px aqua);
+    animation: scanning .7s linear infinite; 
+}
+
+@keyframes scanning {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
