@@ -43,7 +43,7 @@
     }
 
     50% {
-        height: 50vh;
+        height: 380px;
     }
 }
 
@@ -64,12 +64,12 @@
 @keyframes var {
 
     0%, 100% {
-        top: 20vh;
+        top: calc((((100% - 380px) / 2) ));
         
     }
 
     50% {
-        top: 75vh;
+        top: calc(((100% - 380px) / 2 ) + (340px ));
     }
 }
 
@@ -92,4 +92,25 @@
     to {
         opacity: 0;
     }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+
+   
+    .container .fingerPrint {
+
+        height: 330px;
+        width: 17em;
+    } 
+
+    .container .fingerPrint::before {
+
+        height: 330px;
+        width: 17em;
+        
+    }
+
+    .container p {
+        font-size: 1.5em;
+     }
 }
